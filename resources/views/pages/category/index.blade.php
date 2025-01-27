@@ -24,9 +24,14 @@
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             {{ $category->name }}
                         </th>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 flex gap-2">
                             <a href="/category/{{ $category->slug }}">edit</a>
-                            | delete
+                            |
+                            <form action="/category/{{ $category->slug }}" method="POST">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit">delete</button>
+                            </form>
                         </td>
 
                     </tr>
