@@ -33,7 +33,10 @@
 
     @yield('content')
 
-    Footer
+    <div class="bg-blue-500 mt-16">
+
+        Footer
+    </div>
     @yield('scripts')
 </body>
 
