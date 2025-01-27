@@ -8,6 +8,7 @@ Route::get('/', function () {
 });
 
 // hello rubin maharjan
+// hello RObin Mahrjan
 
 Route::get('/category', [CategoryController::class, 'index']);
 Route::get('/category/create', [CategoryController::class, 'create']);
