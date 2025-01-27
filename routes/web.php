@@ -7,6 +7,8 @@ Route::get('/', function () {
     return view('pages.dashboard');
 });
 
+// hello
+
 Route::get('/category', [CategoryController::class, 'index']);
 Route::get('/category/create', [CategoryController::class, 'create']);
 Route::post('/category', [CategoryController::class, 'store']);
