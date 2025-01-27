@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('pages.dashboard');
 });
 
-// hello rubin
+// hello rubin maharjan
 
 Route::get('/category', [CategoryController::class, 'index']);
 Route::get('/category/create', [CategoryController::class, 'create']);
