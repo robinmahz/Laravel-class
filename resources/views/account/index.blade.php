@@ -42,9 +42,9 @@
                             {{ $item->description }}
                         </th>
                         <td class="px-6 py-4 flex gap-2">
-                            <a href="/category/{{ $item->slug }}">edit</a>
+                            <a href="/account/{{ $item->id }}/edit">edit</a>
                             |
-                            <form action="/category/{{ $item->slug }}" method="POST">
+                            <form action="/account/{{ $item->id }}" method="POST">
                                 @method('DELETE')
                                 @csrf
                                 <button type="submit">delete</button>

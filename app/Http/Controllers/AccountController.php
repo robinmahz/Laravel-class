@@ -49,24 +49,26 @@ class AccountController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Account $account)
     {
-        //
+        return view('account.edit', compact('account'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Account $account)
     {
-        //
+        $account->update($request->all());
+        return redirect('/account');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Account $account)
     {
-        //
+        $account->delete();
+        return redirect('/account');
     }
 }
